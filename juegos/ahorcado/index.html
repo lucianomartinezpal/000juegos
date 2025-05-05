@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahorcado - Juegos Educativos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>Ahorcado</h1>
+            <div class="game-info">
+                <div class="score">
+                    <span>Intentos restantes: </span>
+                    <span id="attempts">6</span>
+                </div>
+                <div class="category">
+                    <span>Categoría: </span>
+                    <span id="category">Animales</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="game-area">
+                <div class="hangman-container">
+                    <svg id="hangman" viewBox="0 0 300 300">
+                        <!-- Base -->
+                        <line x1="50" y1="250" x2="250" y2="250" stroke="black" stroke-width="4"/>
+                        <!-- Poste vertical -->
+                        <line x1="100" y1="250" x2="100" y2="50" stroke="black" stroke-width="4"/>
+                        <!-- Poste horizontal -->
+                        <line x1="100" y1="50" x2="200" y2="50" stroke="black" stroke-width="4"/>
+                        <!-- Cuerda -->
+                        <line x1="200" y1="50" x2="200" y2="80" stroke="black" stroke-width="4"/>
+                        <!-- Cabeza -->
+                        <circle cx="200" cy="100" r="20" stroke="black" stroke-width="4" fill="none" class="body-part"/>
+                        <!-- Cuerpo -->
+                        <line x1="200" y1="120" x2="200" y2="180" stroke="black" stroke-width="4" class="body-part"/>
+                        <!-- Brazo izquierdo -->
+                        <line x1="200" y1="140" x2="160" y2="160" stroke="black" stroke-width="4" class="body-part"/>
+                        <!-- Brazo derecho -->
+                        <line x1="200" y1="140" x2="240" y2="160" stroke="black" stroke-width="4" class="body-part"/>
+                        <!-- Pierna izquierda -->
+                        <line x1="200" y1="180" x2="160" y2="220" stroke="black" stroke-width="4" class="body-part"/>
+                        <!-- Pierna derecha -->
+                        <line x1="200" y1="180" x2="240" y2="220" stroke="black" stroke-width="4" class="body-part"/>
+                    </svg>
+                </div>
+
+                <div class="word-container">
+                    <div id="word-display"></div>
+                </div>
+
+                <div class="keyboard">
+                    <div class="keyboard-row">
+                        <button class="key" data-key="Q">Q</button>
+                        <button class="key" data-key="W">W</button>
+                        <button class="key" data-key="E">E</button>
+                        <button class="key" data-key="R">R</button>
+                        <button class="key" data-key="T">T</button>
+                        <button class="key" data-key="Y">Y</button>
+                        <button class="key" data-key="U">U</button>
+                        <button class="key" data-key="I">I</button>
+                        <button class="key" data-key="O">O</button>
+                        <button class="key" data-key="P">P</button>
+                    </div>
+                    <div class="keyboard-row">
+                        <button class="key" data-key="A">A</button>
+                        <button class="key" data-key="S">S</button>
+                        <button class="key" data-key="D">D</button>
+                        <button class="key" data-key="F">F</button>
+                        <button class="key" data-key="G">G</button>
+                        <button class="key" data-key="H">H</button>
+                        <button class="key" data-key="J">J</button>
+                        <button class="key" data-key="K">K</button>
+                        <button class="key" data-key="L">L</button>
+                        <button class="key" data-key="Ñ">Ñ</button>
+                    </div>
+                    <div class="keyboard-row">
+                        <button class="key" data-key="Z">Z</button>
+                        <button class="key" data-key="X">X</button>
+                        <button class="key" data-key="C">C</button>
+                        <button class="key" data-key="V">V</button>
+                        <button class="key" data-key="B">B</button>
+                        <button class="key" data-key="N">N</button>
+                        <button class="key" data-key="M">M</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-controls">
+                <button id="restart-btn" class="btn">Nueva Palabra</button>
+                <button id="back-btn" class="btn">Volver al Menú</button>
+            </div>
+        </main>
+
+        <div id="win-message" class="overlay hidden">
+            <div class="message">
+                <h2>¡Felicidades!</h2>
+                <p>Has adivinado la palabra: <span id="win-word"></span></p>
+                <button id="play-again-btn" class="btn">Jugar de Nuevo</button>
+            </div>
+        </div>
+
+        <div id="lose-message" class="overlay hidden">
+            <div class="message">
+                <h2>¡Game Over!</h2>
+                <p>La palabra era: <span id="lose-word"></span></p>
+                <button id="play-again-btn-lose" class="btn">Jugar de Nuevo</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

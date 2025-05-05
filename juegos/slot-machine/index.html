@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slot Machine - Juegos Educativos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>Slot Machine</h1>
+            <div class="game-info">
+                <div class="credits">
+                    <span>Créditos: </span>
+                    <span id="credits">100</span>
+                </div>
+                <div class="win-amount">
+                    <span>Ganancia: </span>
+                    <span id="win-amount">0</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="game-area">
+                <div class="slot-machine">
+                    <div class="reels">
+                        <div class="reel" id="reel1">
+                            <div class="symbol">🍒</div>
+                            <div class="symbol">🍊</div>
+                            <div class="symbol">🍋</div>
+                            <div class="symbol">🍇</div>
+                            <div class="symbol">🍉</div>
+                            <div class="symbol">7️⃣</div>
+                            <div class="symbol">💎</div>
+                        </div>
+                        <div class="reel" id="reel2">
+                            <div class="symbol">🍒</div>
+                            <div class="symbol">🍊</div>
+                            <div class="symbol">🍋</div>
+                            <div class="symbol">🍇</div>
+                            <div class="symbol">🍉</div>
+                            <div class="symbol">7️⃣</div>
+                            <div class="symbol">💎</div>
+                        </div>
+                        <div class="reel" id="reel3">
+                            <div class="symbol">🍒</div>
+                            <div class="symbol">🍊</div>
+                            <div class="symbol">🍋</div>
+                            <div class="symbol">🍇</div>
+                            <div class="symbol">🍉</div>
+                            <div class="symbol">7️⃣</div>
+                            <div class="symbol">💎</div>
+                        </div>
+                    </div>
+                    <div class="payline"></div>
+                </div>
+
+                <div class="bet-controls">
+                    <button id="decrease-bet" class="btn">-</button>
+                    <span id="bet-amount">1</span>
+                    <button id="increase-bet" class="btn">+</button>
+                </div>
+
+                <div class="game-controls">
+                    <button id="spin-btn" class="btn">Girar</button>
+                    <button id="back-btn" class="btn">Volver al Menú</button>
+                </div>
+            </div>
+        </main>
+
+        <div id="win-message" class="overlay hidden">
+            <div class="message">
+                <h2>¡Felicidades!</h2>
+                <p>Has ganado <span id="win-message-amount">0</span> créditos</p>
+                <button id="play-again-btn" class="btn">Jugar de Nuevo</button>
+            </div>
+        </div>
+
+        <div id="lose-message" class="overlay hidden">
+            <div class="message">
+                <h2>¡Game Over!</h2>
+                <p>Te has quedado sin créditos</p>
+                <button id="restart-btn" class="btn">Reiniciar</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    max-width: 800px;
+    width: 95%;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.credits, .win-amount {
+    color: #34495e;
+}
+
+.game-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.slot-machine {
+    background-color: #2c3e50;
+    border-radius: 10px;
+    padding: 2rem;
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+}
+
+.reels {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    background-color: #34495e;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.reel {
+    background-color: white;
+    border-radius: 5px;
+    height: 200px;
+    width: 120px;
+    overflow: hidden;
+    position: relative;
+}
+
+.symbol {
+    font-size: 4rem;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    transition: transform 0.1s linear;
+}
+
+.payline {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: #e74c3c;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.bet-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+
+#bet-amount {
+    min-width: 3rem;
+    text-align: center;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.game-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn {
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+.btn:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.message h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.message p {
+    color: #34495e;
+    margin-bottom: 1.5rem;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes spin {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-1400px);
+    }
+}
+
+.spinning {
+    animation: spin 2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (max-width: 480px) {
+    .game-container {
+        padding: 1rem;
+    }
+
+    .reel {
+        height: 150px;
+        width: 90px;
+    }
+
+    .symbol {
+        font-size: 3rem;
+        height: 150px;
+    }
+
+    .game-controls {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+} 

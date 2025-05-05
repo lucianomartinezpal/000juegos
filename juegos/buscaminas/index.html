@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscaminas - Juegos Educativos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>Buscaminas</h1>
+            <div class="game-info">
+                <div class="mines-count">
+                    <span>Minas: </span>
+                    <span id="mines">10</span>
+                </div>
+                <div class="timer">
+                    <span>Tiempo: </span>
+                    <span id="time">0</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="game-area">
+                <div class="difficulty-selector">
+                    <button class="difficulty-btn active" data-difficulty="easy">Fácil</button>
+                    <button class="difficulty-btn" data-difficulty="medium">Medio</button>
+                    <button class="difficulty-btn" data-difficulty="hard">Difícil</button>
+                </div>
+                <div id="board"></div>
+            </div>
+
+            <div class="game-controls">
+                <button id="restart-btn" class="btn">Nueva Partida</button>
+                <button id="back-btn" class="btn">Volver al Menú</button>
+            </div>
+        </main>
+
+        <div id="win-message" class="overlay hidden">
+            <div class="message">
+                <h2>¡Felicidades!</h2>
+                <p>Has encontrado todas las minas</p>
+                <p>Tiempo: <span id="win-time"></span> segundos</p>
+                <button id="play-again-btn" class="btn">Jugar de Nuevo</button>
+            </div>
+        </div>
+
+        <div id="lose-message" class="overlay hidden">
+            <div class="message">
+                <h2>¡Game Over!</h2>
+                <p>Has encontrado una mina</p>
+                <button id="play-again-btn-lose" class="btn">Jugar de Nuevo</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

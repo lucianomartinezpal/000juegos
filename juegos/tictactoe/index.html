@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe - Juegos Educativos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>Tic Tac Toe</h1>
+            <div class="game-info">
+                <div class="score">
+                    <span>Jugador X: </span>
+                    <span id="score-x">0</span>
+                </div>
+                <div class="score">
+                    <span>Jugador O: </span>
+                    <span id="score-o">0</span>
+                </div>
+                <div class="turn">
+                    <span>Turno: </span>
+                    <span id="current-player">X</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="board" id="board">
+                <div class="cell" data-cell></div>
+                <div class="cell" data-cell></div>
+                <div class="cell" data-cell></div>
+                <div class="cell" data-cell></div>
+                <div class="cell" data-cell></div>
+                <div class="cell" data-cell></div>
+                <div class="cell" data-cell></div>
+                <div class="cell" data-cell></div>
+                <div class="cell" data-cell></div>
+            </div>
+
+            <div class="game-controls">
+                <button id="restart-btn" class="btn">Reiniciar Partida</button>
+                <button id="back-btn" class="btn">Volver al Menú</button>
+            </div>
+        </main>
+
+        <div id="win-message" class="overlay hidden">
+            <div class="message">
+                <h2>¡Ganador!</h2>
+                <p>El jugador <span id="winner"></span> ha ganado</p>
+                <button id="play-again-btn" class="btn">Jugar de Nuevo</button>
+            </div>
+        </div>
+
+        <div id="draw-message" class="overlay hidden">
+            <div class="message">
+                <h2>¡Empate!</h2>
+                <p>Ningún jugador ha ganado</p>
+                <button id="play-again-btn-draw" class="btn">Jugar de Nuevo</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

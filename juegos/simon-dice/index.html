@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simón Dice - Juegos Educativos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>Simón Dice</h1>
+            <div class="game-info">
+                <div class="score">
+                    <span>Nivel: </span>
+                    <span id="level">1</span>
+                </div>
+                <div class="high-score">
+                    <span>Récord: </span>
+                    <span id="high-score">0</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="simon-container">
+                <div class="simon">
+                    <div class="color red" data-color="red"></div>
+                    <div class="color blue" data-color="blue"></div>
+                    <div class="color yellow" data-color="yellow"></div>
+                    <div class="color green" data-color="green"></div>
+                    <div class="center">
+                        <div class="start-btn" id="start-btn">Iniciar</div>
+                        <div class="strict-btn" id="strict-btn">Modo Estricto</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-controls">
+                <button id="restart-btn" class="btn">Reiniciar</button>
+                <button id="back-btn" class="btn">Volver al Menú</button>
+            </div>
+        </main>
+
+        <div id="game-over" class="overlay hidden">
+            <div class="message">
+                <h2>¡Juego Terminado!</h2>
+                <p>Has llegado al nivel <span id="final-level">1</span></p>
+                <button id="play-again-btn" class="btn">Jugar de Nuevo</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

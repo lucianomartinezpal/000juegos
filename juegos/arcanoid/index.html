@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcanoid - Juegos Educativos</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Arcanoid</h1>
+        <div class="game-info">
+            <span>Puntos: <span id="score">0</span></span>
+            <span>Vidas: <span id="lives">3</span></span>
+            <button id="restart-btn">Reiniciar</button>
+            <button id="back-btn">Volver</button>
+        </div>
+    </header>
+
+    <main class="game-container">
+        <canvas id="gameCanvas"></canvas>
+        <div id="start-screen" class="overlay">
+            <h2>Arcanoid</h2>
+            <p>Usa las flechas ← → para mover la paleta</p>
+            <button id="start-btn">¡Jugar!</button>
+        </div>
+        <div id="game-over" class="overlay hidden">
+            <h2>¡Juego Terminado!</h2>
+            <p>Puntuación final: <span id="final-score">0</span></p>
+            <button id="play-again-btn">Jugar de nuevo</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html> 
