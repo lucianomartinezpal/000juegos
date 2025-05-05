@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     window.location.href = 'juegos/buscaminas/index.html';
                     break;
                 case 'slot-machine':
-                    window.location.href = 'juegos/slot-machine/index.html';
+                    window.location.href = 'https://v0-educational-slot-machine.vercel.app/';
                     break;
                 case 'ruleta':
                         window.location.href = 'https://v0-ruleta-de-la-suerte-e8w7fsjgt-lucianoariel33s-projects.vercel.app/';
